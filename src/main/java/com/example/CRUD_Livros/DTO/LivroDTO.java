@@ -1,26 +1,18 @@
-package com.example.CRUD_Livros.Model;
+package com.example.CRUD_Livros.DTO;
 
 import com.example.CRUD_Livros.Enums.Status;
-import jakarta.persistence.*;
 
-@Entity
-public class Livro {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class LivroDTO {
     private Long id;
-
     private String titulo;
     private String autor;
+    private Status status;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Status status; // Adicionado
-
-    public Livro() {
+    public LivroDTO() {
     }
 
-    public Livro(String titulo, String autor, Status status) {
+    public LivroDTO(Long id, String titulo, String autor, Status status) {
+        this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.status = status;
@@ -28,6 +20,10 @@ public class Livro {
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitulo() {
