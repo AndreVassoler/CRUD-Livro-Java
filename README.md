@@ -26,6 +26,8 @@ Este projeto é um CRUD simples para gerenciamento de livros, desenvolvido com *
  ┃ ┗ 📜 LivroController.java
  ┣ 📂 DTO
  ┃ ┗ 📜 LivroDTO.java
+ ┣ 📂 Enums
+ ┃ ┗ 📜 Status.java
  ┣ 📂 Model
  ┃ ┗ 📜 Livro.java
  ┣ 📂 Repository
